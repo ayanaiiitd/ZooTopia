@@ -1,0 +1,30 @@
+Maven Java Project named ZOOtopia-->
+Classes are-
+    1.Admin->all the features which admin can perform are in Admin class,Admin constructor do not
+            require any argument.
+            For admin login "email=xyz@gamil.com" and "password=1234" both are type String
+            1.Add Attraction-{ AttractionId(int),Attraction name(String),Attraction description(String)}
+            2.Schedule Events-{Event time(String),Attraction price(int)
+            3.Add discount-{discountId(int),discountCategory(String),discountPercentage(int)}
+            4.set discount code-{discountCode(String)}
+            5.set special deals-{numberTickets(int),discountPercentage(int)}
+            -Admin instance is initiated in Main
+            -Attractions is a inner class in Admin which used for attractionList which in turn
+            is used by Admin to manageAttractions
+    2.Animals->methods like add,remove,update animal are defined in this class.Animals constructor
+               require{(String AnimalName,String animalType,String animalNoise,String animalDescription)}
+                -6 Animals(2 Mammals,2 Reptiles,2 Amphibians) are default
+               -An instance a1 of Animals is defined in Admin which used bu admin for manageAttractions
+    3.Functionalities->all features which Visitor can access are defined in this class.Functionalities
+                constructor requires two arguments(Animals instance and Admin instance)
+                -To uniquely identify a visitor his email is required
+                1.register visitor-{Visitor instance from Main}
+                2.login-{email(String),password(String)}
+                3.buy membership-if eligible discount will be applied automatically
+    4.SpecialDeals->Methods for add,remove,eligibility for discount are defined in this class.An internal class Specialdealset
+                {numberTickets(int),discountPercentage(int) is used in list which is used to store special
+                deals set by the admin
+    5.Visitor->all the getter and setter methods related to Visitor are defined in this class.
+                Visitor constructor requires{String visitorName, int visitorAge, String visitorPhoneNumber,
+                int visitorBalance, String visitorEmail, String visitorPassword)} as arguments
+                -Visitor instance is initiated in Main
